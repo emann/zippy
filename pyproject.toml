@@ -6,6 +6,7 @@ authors = ["Ethan Mann <emannguitar@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+pyyaml = "^5.3"
 
 [tool.poetry.dev-dependencies]
 

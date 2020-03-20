@@ -2,9 +2,9 @@ import zipfile, time, os, re, threading
 
 
 class FolderWatcher:
-    def __init__(self, parent_folder, subfolder_keyword_map, watch_folder = None):
-        self.parent_folder = parent_folder
-        self.watch_folder = watch_folder if watch_folder else parent_folder
+    def __init__(self, watch_folder, subfolder_keyword_map, parent_folder = None):
+        self.watch_folder = watch_folder
+        self.parent_folder = parent_folder if parent_folder else watch_folder
         self.subfolder_keyword_map = subfolder_keyword_map
         self.running=True
         self.watcher_thread = threading.Thread(target=self.watch_loop).start()
